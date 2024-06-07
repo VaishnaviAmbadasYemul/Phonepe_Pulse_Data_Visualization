@@ -52,7 +52,9 @@ agg_trans_list = os.listdir(path1)
 #Give any column names that you want
 columns1 = {'State': [], 'Year': [], 'Quarter': [], 'Transaction_type': [], 'Transaction_count': [],'Transaction_amount': []}
 
+
 Looping through each and every folder and opening the json files appending only the required key and values and creating the dataframe.
+
 
 for state in agg_trans_list:
     cur_state = path1 + state + "/"
@@ -81,8 +83,12 @@ for state in agg_trans_list:
 df = pd.DataFrame(columns1)
     
 
+
+
 **Converting the dataframe into csv file**
+
 df.to_csv('filename.csv',index=False)
+
 
 **Step 4**:
 # Database insertion:
@@ -90,6 +96,7 @@ df.to_csv('filename.csv',index=False)
 To insert the datadrame into SQL first I've created a new database and tables using "mysql-connector-python" library in Python to connect to a MySQL database and insert the transformed data using SQL commands.
 
 **Creating the connection between python and mysql**
+
 
 ** mydb = sql.connect(host="localhost",
                user="username",
