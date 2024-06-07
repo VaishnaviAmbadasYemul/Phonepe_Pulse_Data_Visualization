@@ -97,12 +97,12 @@ To insert the datadrame into SQL first I've created a new database and tables us
 
 **Creating the connection between python and mysql**
 
- > mydb = sql.connect(host="localhost",
+ ```mydb = sql.connect(host="localhost",
                user="username",
                password="password",
                database= "phonepe_pulse"
               )
- > mycursor = mydb.cursor(buffered=True)
+    mycursor = mydb.cursor(buffered=True) ```
 
   
   
