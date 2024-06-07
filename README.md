@@ -1,4 +1,5 @@
-![mysql](https://github.com/VaishnaviAmbadasYemul/Phonepe_Pulse_Data_Visualization/assets/169760737/228e50e3-b68b-40ae-ab7f-fa7e816b217b)Data Visualization and Exploration : A User-Friendly Tool Using Streamlit and Plotly
+![mysql](https://github.com/VaishnaviAmbadasYemul/Phonepe_Pulse_Data_Visualization/assets/169760737/228e50e3-b68b-40ae-ab7f-fa7e816b217b)
+Data Visualization and Exploration : A User-Friendly Tool Using Streamlit and Plotly
 
 What is PhonePe Pulse?
 The PhonePe Pulse website showcases more than 2000+ Crore transactions by consumers on an interactive map of India. With over 45% market share, PhonePe's data is representative of the country's digital payment habits. The insights on the website and in the report have been drawn from two key sources - the entirety of PhonePe's transaction data combined with merchant and customer interviews. The report is available as a free download on the PhonePe Pulse website and GitHub.
@@ -75,25 +76,24 @@ for state in agg_trans_list:
                 columns1['Transaction_amount'].append(amount)
                 columns1['State'].append(state)
                 columns1['Year'].append(year)
-                columns1['Quarter'].append(int(file.strip('.json')))
-            
+                columns1['Quarter'].append(int(file.strip('.json')))            
 df = pd.DataFrame(columns1)
 
-Converting the dataframe into csv file
+# Converting the dataframe into csv file
 df.to_csv('filename.csv',index=False)
 
 **Step 4**:
-Database insertion:
-
-To insert the datadrame into SQL first I've created a new database and tables using "mysql-connector-python" library in Python to connect to a MySQL database and insert the transformed data using SQL commands.
-
-Creating the connection between python and mysql
-Step 4:
-Database insertion:
+# Database insertion:
 
 To insert the datadrame into SQL first I've created a new database and tables using "mysql-connector-python" library in Python to connect to a MySQL database and insert the transformed data using SQL commands.
 
 **Creating the connection between python and mysql**
+mydb = sql.connect(host="localhost",
+               user="username",
+               password="password",
+               database= "phonepe_pulse"
+              )
+mycursor = mydb.cursor(buffered=True)
 
   
   
