@@ -1,6 +1,6 @@
 # Data Visualization and Exploration : A User-Friendly Tool Using Streamlit and Plotly
 
-## What is PhonePe Pulse?
+# What is PhonePe Pulse?
 
 The PhonePe Pulse website showcases more than 2000+ Crore transactions by consumers on an interactive map of India. With over 45% market share, PhonePe's data is representative of the country's digital payment habits. The insights on the website and in the report have been drawn from two key sources - the entirety of PhonePe's transaction data combined with merchant and customer interviews. The report is available as a free download on the PhonePe Pulse website and GitHub.
 
@@ -14,8 +14,8 @@ Libraries/Modules needed for the project!
 
 # Workflow
 
-Step 1:
-Importing the Libraries:
+**Step 1:**
+**Importing the Libraries:**
 
 Importing the libraries. As I have already mentioned above the list of libraries/modules needed for the project. First we have to import all those libraries. If the libraries are not installed already use the below piece of code to install.
 
@@ -41,8 +41,8 @@ Clone the Github using scripting to fetch the data from the Phonepe pulse Github
     from git.repo.base import Repo
     Repo.clone_from("GitHub Clone URL","Path to get the cloded files")
 
-Step 3:
-Data transformation:
+# Step 3:
+**Data transformation:**
 
 In this step the JSON files that are available in the folders are converted into the readeable and understandable DataFrame format by using the for loop and iterating file by file and then finally the DataFrame is created. In order to perform this step I've used os, json and pandas packages. And finally converted the dataframe into CSV file and storing in the local drive.
 
@@ -80,7 +80,6 @@ for state in agg_trans_list:
 df = pd.DataFrame(columns1)
 
 **Converting the dataframe into csv file**
-
 df.to_csv('filename.csv',index=False)
 
 **Step 4**:
@@ -90,7 +89,7 @@ To insert the datadrame into SQL first I've created a new database and tables us
 
 **Creating the connection between python and mysql**
 
-#mydb = sql.connect(host="localhost",
+# mydb = sql.connect(host="localhost",
                user="username",
                password="password",
                database= "phonepe_pulse"
