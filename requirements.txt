@@ -1,0 +1,6 @@
+pandas==2.0.3
+mysql-connector-python==8.0.32
+streamlit==1.25.0
+plotly==5.16.1
+streamlit-option-menu==0.3.2
+Visual Studio code==1.89.1
