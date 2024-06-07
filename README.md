@@ -110,7 +110,7 @@ mycursor = mydb.cursor(buffered=True)
 ```
 **Creating tables**
 
-       ```
+      
        mycursor.execute("create table 'Table name' (col1 varchar(100), col2 int, col3 int, col4 varchar(100), col5 int, col6 double)")
     
         for i,row in df.iterrows():
@@ -121,7 +121,7 @@ mycursor = mydb.cursor(buffered=True)
             
             # the connection is not auto committed by default, so we must commit to save our changes
             mydb.commit()
-            ```
+        
 
   
 # Step 5:
