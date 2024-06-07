@@ -4,7 +4,7 @@
 
 The PhonePe Pulse website showcases more than 2000+ Crore transactions by consumers on an interactive map of India. With over 45% market share, PhonePe's data is representative of the country's digital payment habits. The insights on the website and in the report have been drawn from two key sources - the entirety of PhonePe's transaction data combined with merchant and customer interviews. The report is available as a free download on the PhonePe Pulse website and GitHub.
 
-Libraries/Modules needed for the project!
+# Libraries/Modules needed for the project!
 1. Plotly - (To plot and visualize the data)
 2. Pandas - (To Create a DataFrame with the scraped data)
 3. mysql.connector - (To store and retrieve the data)
@@ -14,7 +14,7 @@ Libraries/Modules needed for the project!
 
 # Workflow
 
-**Step 1:**
+# Step 1:
 **Importing the Libraries:**
 
 Importing the libraries. As I have already mentioned above the list of libraries/modules needed for the project. First we have to import all those libraries. If the libraries are not installed already use the below piece of code to install.
@@ -79,7 +79,8 @@ for state in agg_trans_list:
                 columns1['Quarter'].append(int(file.strip('.json')))            
 df = pd.DataFrame(columns1)
 
-**Converting the dataframe into csv file**
+# Converting the dataframe into csv file
+
 df.to_csv('filename.csv',index=False)
 
 **Step 4**:
@@ -89,7 +90,7 @@ To insert the datadrame into SQL first I've created a new database and tables us
 
 **Creating the connection between python and mysql**
 
-# mydb = sql.connect(host="localhost",
+mydb = sql.connect(host="localhost",
                user="username",
                password="password",
                database= "phonepe_pulse"
