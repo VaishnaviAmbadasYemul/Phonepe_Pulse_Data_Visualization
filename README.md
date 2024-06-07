@@ -49,7 +49,7 @@ In this step the JSON files that are available in the folders are converted into
 path1 = "Path of the JSON files"
 agg_trans_list = os.listdir(path1)
 
-# Give any column names that you want
+#Give any column names that you want
 columns1 = {'State': [], 'Year': [], 'Quarter': [], 'Transaction_type': [], 'Transaction_count': [],'Transaction_amount': []}
 
 Looping through each and every folder and opening the json files appending only the required key and values and creating the dataframe.
@@ -76,11 +76,12 @@ for state in agg_trans_list:
                 columns1['Transaction_amount'].append(amount)
                 columns1['State'].append(state)
                 columns1['Year'].append(year)
-                columns1['Quarter'].append(int(file.strip('.json')))            
+                columns1['Quarter'].append(int(file.strip('.json')))
+            
 df = pd.DataFrame(columns1)
+    
 
-# Converting the dataframe into csv file
-
+**Converting the dataframe into csv file**
 df.to_csv('filename.csv',index=False)
 
 **Step 4**:
@@ -90,12 +91,12 @@ To insert the datadrame into SQL first I've created a new database and tables us
 
 **Creating the connection between python and mysql**
 
-mydb = sql.connect(host="localhost",
+** mydb = sql.connect(host="localhost",
                user="username",
                password="password",
                database= "phonepe_pulse"
               )
-mycursor = mydb.cursor(buffered=True)
+** mycursor = mydb.cursor(buffered=True)
 
   
   
