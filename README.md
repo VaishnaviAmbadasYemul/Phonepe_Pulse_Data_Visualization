@@ -46,16 +46,19 @@ Clone the Github using scripting to fetch the data from the Phonepe pulse Github
 
 In this step the JSON files that are available in the folders are converted into the readeable and understandable DataFrame format by using the for loop and iterating file by file and then finally the DataFrame is created. In order to perform this step I've used os, json and pandas packages. And finally converted the dataframe into CSV file and storing in the local drive.
 
+```
 path1 = "Path of the JSON files"
 agg_trans_list = os.listdir(path1)
 
 #Give any column names that you want
 columns1 = {'State': [], 'Year': [], 'Quarter': [], 'Transaction_type': [], 'Transaction_count': [],'Transaction_amount': []}
+```
 
 
 Looping through each and every folder and opening the json files appending only the required key and values and creating the dataframe.
 
 
+```
 for state in agg_trans_list:
     cur_state = path1 + state + "/"
     agg_year_list = os.listdir(cur_state)
@@ -81,13 +84,15 @@ for state in agg_trans_list:
                 columns1['Quarter'].append(int(file.strip('.json')))
             
 df = pd.DataFrame(columns1)
+```
     
 
 
 
 **Converting the dataframe into csv file**
-
+```
 df.to_csv('filename.csv',index=False)
+```
 
 
 **Step 4**:
